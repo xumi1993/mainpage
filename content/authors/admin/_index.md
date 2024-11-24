@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Alice Wu (吳恩達)
+title: Mijian Xu (徐弥坚)
 
 # Is this the primary user of the site?
 superuser: true
@@ -10,12 +10,12 @@ role: ''
 
 # Status emoji
 status:
-  icon: ☕️
+  icon: ':earth_americas:'
 
 # Organizations/Affiliations
-#organizations:
-#- name: 腾讯
-#  url: ""
+organizations:
+- name: Department of Physics, University of Toronto
+  url: "https://www.physics.utoronto.ca/~liuqy/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include distributed robotics, mobile computing and programmable matter.
@@ -44,17 +44,19 @@ bio: My research interests include distributed robotics, mobile computing and pr
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'about/#contact' # For a direct email link, use "mailto:test@example.org".
-  - icon: twitter
+    link: 'mailto:gomijianxu@gmail.com' # For a direct email link, use "mailto:test@example.org".
+  - icon: github
     icon_pack: fab
     link: https://twitter.com/wowchemy
-  - icon: instagram
+  - icon: gitlab
     icon_pack: fab
-    link: https://instagram.com/geocushen
-# Uncomment below for Github link
-#- icon: github
-#  icon_pack: fab
-#  link: https://github.com/gcushen
+    link: https://git.nju.edu.cn/xumi1993
+  - icon: google-scholar
+    icon_pack: fab
+    link: "https://scholar.google.com/citations?user=AGBUZWoAAAAJ&hl=en"
+  - icon: orcid
+    icon_pack: fab
+    link: "https://orcid.org/0000-0001-8888-8523"
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -66,8 +68,3 @@ social:
 #email: ""
 ---
 
-Alice Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
-
-{{< icon name="download" pack="fas" >}} {{< staticref "uploads/resume.pdf" "newtab" >}}Download{{< /staticref >}} my resumé as a PDF.

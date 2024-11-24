@@ -7,6 +7,12 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: Resumé
-    url: about/
+  - name: About
+    url: https://home.xumijian.me
     weight: 20
+  - name: Blog
+    url: https://blog.xumijian.me
+    weight: 30
+  - name: Docs
+    url: https://docs.xumijian.me
+    weight: 40

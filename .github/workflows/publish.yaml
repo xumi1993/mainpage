@@ -31,6 +31,9 @@ jobs:
         with:
           # Fetch history for Hugo's .GitInfo and .Lastmod
           fetch-depth: 0
+      - name: Prepare source
+        run: |
+          git clone https://github.com/xumi1993/xumi1993.github.io.git ./public
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
@@ -42,29 +45,25 @@ jobs:
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod') }}
           restore-keys: |
             ${{ runner.os }}-hugomod-
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
         run: |
           echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
-          hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+          hugo --minify --baseURL "https://xumijian.me/"
+      - name: Commit files
+        run: |
+          cd ./public
+          git config --local user.email "gomijianxu@gmail.com"
+          git config --local user.name "xumi1993"
+          git commit -m `date +"%Y.%m.%dT%H:%M%S"` -a
+      - name: Pushes to blog repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          path: ./public
-
-  # Deploy website to GitHub Pages hosting
-  deploy:
-    if: github.repository_owner != 'HugoBlox'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          source-directory: 'public'
+          destination-github-username: 'xumi1993'
+          destination-repository-name: 'xumi1993.github.io.git'
+          user-email: gomijianxu@gmail.com
+          target-branch: master
