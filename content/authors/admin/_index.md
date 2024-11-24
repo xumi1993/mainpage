@@ -47,10 +47,10 @@ social:
     link: 'mailto:gomijianxu@gmail.com' # For a direct email link, use "mailto:test@example.org".
   - icon: github
     icon_pack: fab
-    link: https://twitter.com/wowchemy
+    link: https://github.com/xumi1993
   - icon: gitlab
     icon_pack: fab
-    link: https://git.nju.edu.cn/xumi1993
+    link: https://gitlab.com/xumi1993
   - icon: google-scholar
     icon_pack: fab
     link: "https://scholar.google.com/citations?user=AGBUZWoAAAAJ&hl=en"
