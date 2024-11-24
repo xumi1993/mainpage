@@ -65,6 +65,6 @@ jobs:
         with:
           source-directory: 'public'
           destination-github-username: 'xumi1993'
-          destination-repository-name: 'xumi1993.github.io.git'
+          destination-repository-name: 'xumi1993.github.io'
           user-email: gomijianxu@gmail.com
           target-branch: master
