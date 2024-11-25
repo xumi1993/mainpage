@@ -28,7 +28,7 @@ content:
   filter_button:
     - name: Pages
       tag: pages
-    - name: Sorfware
+    - name: Software
       tag: code
 
 design:
