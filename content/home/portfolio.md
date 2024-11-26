@@ -35,6 +35,7 @@ design:
   columns: '1'
   view: masonry
   flip_alt_rows: false
-  background: {}
-  spacing: {padding: [0, 0, 0, 0]}
+  background: 
+    image: background.svg
+  spacing: {padding: [0, 0, 20, 0]}
 ---
